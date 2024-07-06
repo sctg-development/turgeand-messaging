@@ -13,6 +13,17 @@ jobs:
       with:
         node-version: '20'
 
+    - name: Create fake wrangler.toml
+      run: |
+        echo "#:schema node_modules/wrangler/config-schema.json" > wrangler.toml
+        echo 'name = "turgeand-messaging"' >> wrangler.toml
+        echo 'main = "src/index.ts"' >> wrangler.toml
+        echo 'compatibility_date = "2024-07-01"' >> wrangler.toml
+        echo 'compatibility_flags = ["nodejs_compat"]' >> wrangler.toml
+        echo 'kv_namespaces = [' >> wrangler.toml
+        echo '  { binding = "TWILIO_KV", id = "085b7cbf251c15d1c2e1e5c063ac86b5" }' >> wrangler.toml
+        echo ']' >> wrangler.toml
+
     - name: Install dependencies
       run: npm install
 
