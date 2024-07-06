@@ -1,0 +1,27 @@
+{
+  "name": "turgeand-messaging",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "test:debug": "node --inspect-brk ./node_modules/vitest/dist/cli.js --no-file-parallelism run",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.4.5",
+    "@cloudflare/workers-types": "^4.20240620.0",
+    "gulp": "^5.0.0",
+    "gulp-append-prepend": "^1.0.9",
+    "gulp-if": "^3.0.0",
+    "typescript": "^5.4.5",
+    "vitest": "1.5.0",
+    "wrangler": "^3.60.3"
+  },
+  "dependencies": {
+    "bcrypt-ts": "^5.0.2",
+    "twilio": "^5.2.2"
+  }
+}
