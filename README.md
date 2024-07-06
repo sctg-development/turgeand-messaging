@@ -2,6 +2,8 @@
 
 This Cloudflare Worker is designed to handle incoming SMS messages from Twilio webhooks and store them in Cloudflare KV (Key-Value) storage. It also provides functionality to retrieve stored messages for a given destination number.
 
+[![Run CI tests with Vitest](https://github.com/sctg-development/turgeand-messaging/actions/workflows/vitest.yml/badge.svg)](https://github.com/sctg-development/turgeand-messaging/actions/workflows/vitest.yml)
+
 ## Features
 
 - Receives and stores incoming SMS data from Twilio webhooks
