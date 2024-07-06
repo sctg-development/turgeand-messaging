@@ -1,4 +1,4 @@
-name: Run Vitest
+name: Run CI tests with Vitest
 
 on: [push]
 
